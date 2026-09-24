@@ -53,3 +53,15 @@ Incoming payloads undergo structural validation, update user authorization metad
 Cross-Platform Logical Component Sharing
 •	Problem: Writing separate web and mobile layers usually duplicates business logic, validation scripts, and state models.
 •	Solution: Isolated business logic hooks, analytical schemas, and validation scripts into a shared directory, achieving significant code reuse between the Next.js web application and the Expo mobile application.
+
+
+```mermaid
+graph TD
+    A[Web Client: Next.js / Vercel] -->|REST / Auth| C(Supabase Gateway)
+    B[Mobile Client: React Native / Expo] -->|Real-time Socket / Auth| C
+    C --> D[(PostgreSQL Database)]
+    E[Stripe / Paddle / RevenueCat] -->|Asynchronous Webhooks| F[Serverless Edge Functions]
+    F -->|Validated Access Update| D
+    F -->|Engagement Triggers| G[Firebase Cloud Messaging]
+    G -->|Push Notifications| B
+```
