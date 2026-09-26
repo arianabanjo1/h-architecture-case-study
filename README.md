@@ -8,7 +8,7 @@ A commercial, production-deployed web and native mobile software-as-a-service (S
 •	Target Platforms: Android, iOS, Web (Responsive)
 
 System Architecture Overview
-Humijin is built as a highly performant, data-driven application utilizing a modern serverless backend paired with native mobile and web client layers. The system architecture emphasizes code reuse, zero-downtime deployment pipelines, and efficient real-time state synchronization.
+The application is built as a highly performant, data-driven application utilizing a modern serverless backend paired with native mobile and web client layers. The system architecture emphasizes code reuse, zero-downtime deployment pipelines, and efficient real-time state synchronization.
 
 
 [ Web Client: Next.js ] <----\
